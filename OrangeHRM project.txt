@@ -911,7 +911,7 @@ public class CustomerProject {
 	        }
 
 	        // Click on the 'Edit' button for a specific customer project
-	        WebElement editButton = driver.findElement(By.xpath("//button[@class='edit-button'][1]")); // Replace with the appropriate locator for the 'Edit' button
+	        WebElement editButton = driver.findElement(By.xpath("//button[@class='edit-button'][1]")); 
 	        editButton.click();
 
 	        // Update the customer project info by modifying the input fields
@@ -983,14 +983,14 @@ public class DeleteCustomerProjectInfo {
 	                }
 
 	                // Click on the 'Delete' button for a specific customer project
-	                WebElement deleteButton = driver.findElement(By.xpath("//button[@class='delete-button'][1]")); // Replace with the appropriate locator for the 'Delete' button
+	                WebElement deleteButton = driver.findElement(By.xpath("//button[@class='delete-button']"));
 	                deleteButton.click();
 
 	                // Confirm the delete operation in the alert
 	                driver.switchTo().alert.accept();
 
 	                // Verify that the customer project info is deleted by checking for success message or absence of deleted element
-	                WebElement successMessage = driver.findElement(By.xpath("//div[@class='success-message']")); // Replace with the appropriate locator for the success message
+	                WebElement successMessage = driver.findElement(By.xpath("//div[@class='success-message']"));
 	                if (successMessage.isDisplayed()) {
 	                    System.out.println("Customer Project Info deleted successfully.");
 	                } else {
@@ -1062,7 +1062,7 @@ public class AddProject {
 	        if (successMessage.isDisplayed()) {
 	            System.out.println("Project added successfully.");
 	        } else {
-	            WebElement addedProject = driver.findElement(By.xpath("//a[text()='Project 1']")); // Replace with the appropriate locator for the added project
+	            WebElement addedProject = driver.findElement(By.xpath("//a[text()='Project 1']")); 
 	            if (addedProject.isDisplayed()) {
 	                System.out.println("Project added successfully.");
 	            } else {
@@ -1111,7 +1111,7 @@ public class EmployrrTimesheet {
 	            System.out.println("Employee timesheet is not displayed.");
 	        }
 
-	        // Close the browser window
+	        // Close the browser 
 	        driver.quit();
 	   
 	        
@@ -1171,6 +1171,9 @@ public class SelfAttendanceRecord {
 
 
 package orangeHRM;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class EmpTimesheetNonExcitingEmp {
 
